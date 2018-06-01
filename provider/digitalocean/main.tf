@@ -14,7 +14,7 @@ variable "hostname_format" {
 
 variable "region" {
   type    = "string"
-  default = "fra1"
+  default = "nyc3"
 }
 
 variable "image" {

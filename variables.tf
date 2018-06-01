@@ -4,41 +4,11 @@ variable "hosts" {
 }
 
 variable "domain" {
-  default = "example.com"
+  default = "romaniuk.us"
 }
 
 variable "hostname_format" {
   default = "kube%d"
-}
-
-/* hcloud */
-variable "hcloud_token" {
-  default = ""
-}
-
-variable "hcloud_ssh_keys" {
-  default = []
-}
-
-variable "hcloud_location" {
-  default = "nbg1"
-}
-
-variable "hcloud_type" {
-  default = "cx11"
-}
-
-/* scaleway */
-variable "scaleway_organization" {
-  default = ""
-}
-
-variable "scaleway_token" {
-  default = ""
-}
-
-variable "scaleway_region" {
-  default = "ams1"
 }
 
 /* digitalocean */
@@ -46,49 +16,31 @@ variable "digitalocean_token" {
   default = ""
 }
 
+/* curl -X GET -H "Content-Type: application/json" 
+-H "Authorization: Bearer token" 
+"https://api.digitalocean.com/v2/account/keys"
+*/
 variable "digitalocean_ssh_keys" {
-  default = []
+  default = [21272568]
 }
 
 variable "digitalocean_region" {
-  default = "fra1"
-}
-
-/* aws dns */
-variable "aws_access_key" {
-  default = ""
-}
-
-variable "aws_secret_key" {
-  default = ""
-}
-
-variable "aws_region" {
-  default = "eu-west-1"
-}
-
-/* cloudflare dns */
-variable "cloudflare_email" {
-  default = ""
-}
-
-variable "cloudflare_token" {
-  default = ""
+  default = "nyc3"
 }
 
 /* google dns */
 variable "google_project" {
-  default = ""
+  default = "hobby-kube"
 }
 
 variable "google_region" {
-  default = ""
+  default = "us-east1"
 }
 
 variable "google_managed_zone" {
-  default = ""
+  default = "hobby-kube"
 }
 
 variable "google_credentials_file" {
-  default = ""
+  default = "hobby-kube-535539cd0871.json"
 }

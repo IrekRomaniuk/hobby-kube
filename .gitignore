@@ -2,3 +2,4 @@
 terraform.tfstate*
 .terraform.tfstate*
 terraform.tfvars
+hobby-kube-535539cd0871.json

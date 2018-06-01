@@ -1,25 +1,4 @@
-# module "provider" {
-#   source = "./provider/scaleway"
-
-#   organization    = "${var.scaleway_organization}"
-#   token           = "${var.scaleway_token}"
-#   hosts           = "${var.hosts}"
-#   hostname_format = "${var.hostname_format}"
-#   region          = "${var.scaleway_region}"
-# }
-
 module "provider" {
-  source = "./provider/hcloud"
-
-  hosts           = "${var.hosts}"
-  token           = "${var.hcloud_token}"
-  type            = "${var.hcloud_type}"
-  ssh_keys        = "${var.hcloud_ssh_keys}"
-  location        = "${var.hcloud_location}"
-  hostname_format = "${var.hostname_format}"
-}
-
-/*module "provider" {
   source = "./provider/digitalocean"
 
   token           = "${var.digitalocean_token}"
@@ -27,34 +6,8 @@ module "provider" {
   hosts           = "${var.hosts}"
   hostname_format = "${var.hostname_format}"
   region          = "${var.digitalocean_region}"
-}*/
-
-module "dns" {
-  source = "./dns/cloudflare"
-
-  count      = "${var.hosts}"
-  email      = "${var.cloudflare_email}"
-  token      = "${var.cloudflare_token}"
-  domain     = "${var.domain}"
-  public_ips = "${module.provider.public_ips}"
-  hostnames  = "${module.provider.hostnames}"
 }
 
-/*
-module "dns" {
-  source = "./dns/aws"
-
-  count      = "${var.hosts}"
-  access_key = "${var.aws_access_key}"
-  secret_key = "${var.aws_secret_key}"
-  region     = "${var.aws_region}"
-  domain     = "${var.domain}"
-  public_ips = "${module.provider.public_ips}"
-  hostnames  = "${module.provider.hostnames}"
-}
-*/
-
-/*
 module "dns" {
   source = "./dns/google"
 
@@ -67,7 +20,6 @@ module "dns" {
   public_ips   = "${module.provider.public_ips}"
   hostnames    = "${module.provider.hostnames}"
 }
-*/
 
 module "swap" {
   source = "./service/swap"
