@@ -32,7 +32,7 @@ Export the following environment variables depending on the modules you're using
 #### Using DigitalOcean as provider
 
 ```sh
-export TF_VAR_digitalocean_token=<token>
+export TF_VAR_digitalocean_token=<token> # DigitalOcean Application & API
 export TF_VAR_digitalocean_ssh_keys=<keys> # e.g. '["121671", "1714133"]'
 ```
 
