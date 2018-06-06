@@ -4,7 +4,7 @@ variable "hosts" {
 }
 
 variable "domain" {
-  default = "romaniuk.us"
+  default = "romaniuk.xyz"
 }
 
 variable "hostname_format" {
