@@ -1,6 +1,6 @@
 # Kubernetes cluster setup automation (for DigitalOcean)
 
-> This is my modifcation of the Hobby Kube project (provisioning part). Functionality of the modules is described in the [guide](https://github.com/hobby-kube/guide).
+> This is my modifcation of the Hobby Kube project (provisioning part) described in the blog post [here](https://medium.com/@IrekRomaniuk). Functionality of the modules is described in the [guide](https://github.com/hobby-kube/guide).
 
 Deploy a secure Kubernetes cluster on [DigitalOcean](https://www.digitalocean.com/) using [Terraform](https://www.terraform.io/) (and [Google Cloud DNS](https://cloud.google.com/dns/)).
 
