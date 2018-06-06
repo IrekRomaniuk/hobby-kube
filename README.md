@@ -2,16 +2,25 @@
 
 > This is my modifcation of the Hobby Kube project. Functionality of the modules is described in the [guide](https://github.com/hobby-kube/guide).
 
-Deploy a secure Kubernetes cluster on [DigitalOcean](https://www.digitalocean.com/) using [Terraform](https://www.terraform.io/).
+Deploy a secure Kubernetes cluster on [DigitalOcean](https://www.digitalocean.com/) using [Terraform](https://www.terraform.io/) (and [Google Cloud DNS](https://cloud.google.com/dns/)).
 
 ## Setup
 
 ### Requirements
 
-The following packages are required to be installed locally:
+The following packages (plus terraform and kubectl) are required to be installed locally:
 
-```sh
-brew install terraform kubectl jq wireguard-tools
+macOS:
+```
+brew install jq wireguard-tools
+```
+
+Ubuntu:
+```
+sudo apt-get install jq
+sudo add-apt-repository ppa:wireguard/wireguard
+sudo apt-get update
+sudo apt-get install wireguard
 ```
 
 Modules are using ssh-agent for remote operations. Add your SSH key with `ssh-add -K` if Terraform repeatedly fails to connect to remote hosts.
