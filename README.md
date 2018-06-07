@@ -23,7 +23,7 @@ sudo apt-get update
 sudo apt-get install wireguard
 ```
 
-Modules are using ssh-agent for remote operations. Add your SSH key with `ssh-add -K` if Terraform repeatedly fails to connect to remote hosts.
+Modules are using ssh-agent for remote operations. Add your SSH key with `ssh-add -K` if Terraform repeatedly fails to connect to remote hosts. You might need to start ssh-agent before you run the ssh-add command eval `ssh-agent -s` before typing ssh-add
 
 ### Configuration
 
